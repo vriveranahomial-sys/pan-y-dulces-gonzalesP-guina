@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pan & Dulces Gonzales</title>
+    <!-- Conexión con tu archivo de estilos -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- Encabezado y Navegación -->
+    <header>
+        <h1>🍞 Pan & Dulces Gonzales</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#bocaditos">Bocaditos</a>
+            <a href="#pedidos">Hacer Pedido</a>
+        </nav>
+    </header>
+
+    <!-- Sección de Bienvenida -->
+    <section id="inicio" class="hero">
+        <h2>El verdadero sabor artesanal</h2>
+        <p>Pan calientito, pasteles personalizados y bocaditos horneados con amor todas las mañanas.</p>
+        <a href="#pedidos" class="btn-contacto">¡Realiza tu Torta o Pedido Aquí!</a>
+    </section>
+
+    <!-- Sección de Productos Generales -->
+    <section id="productos" class="seccion">
+        <h3>Nuestras Especialidades</h3>
+        <div class="grid-productos">
+            <div class="producto-card">
+                <h4>🎂 Tortas Personalizadas</h4>
+                <p>Diseños hermosos y deliciosos para celebrar tus fechas más especiales.</p>
+                <p class="precio">Consúltanos</p>
+            </div>
+            <div class="producto-card">
+                <h4>🥐 Panes Artesanales</h4>
+                <p>Variedad de panes frescos horneados a diario con la mejor calidad.</p>
+                <p class="precio">Consúltanos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Bocaditos Clásicos basados en tu Instagram -->
+    <section id="bocaditos" class="seccion">
+        <h3>✨ Bocaditos Clásicos ✨</h3>
+        <p style="text-align: center; font-weight: bold; color: #7f4f24; font-size: 1.2rem;">
+            📦 100 Unidades Desde S/. 90
+        </p>
+        <div class="grid-productos">
+            <div class="producto-card">
+                <h4>🥮 Variedad Tradicional</h4>
+                <ul style="text-align: left; padding-left: 20px; line-height: 1.6;">
+                    <li>Mini alfajores</li>
+                    <li>Mini pionono</li>
+                    <li>Caracolitos</li>
+                    <li>Empanaditas</li>
+                </ul>
+            </div>
+            <div class="producto-card">
+                <h4>🍫 Variedad Salada y Dulce</h4>
+                <ul style="text-align: left; padding-left: 20px; line-height: 1.6;">
+                    <li>Santa clara</li>
+                    <li>Mini trufas</li>
+                    <li>Tequeños J/Q</li>
+                    <li>Enrolladito</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ventana/Sección de Pedidos Interactiva Dinámica -->
+    <section id="pedidos" class="seccion-formulario">
+        <h3>🎂 ¡Realiza tu Torta Personalizada o Pedido!</h3>
+        <form id="formulario-pedido">
+            <div class="campo">
+                <label>Nombre Completo:</label>
+                <input type="text" id="nombre-cliente" placeholder="Tu nombre" required>
+            </div>
+            
+            <div class="campo">
+                <label>¿Qué tipo de producto deseas ordenar?:</label>
+                <select id="producto-seleccionado" required>
+                    <option value="" disabled selected>Selecciona una opción...</option>
+                    <option value="Torta Personalizada">🎂 Torta Personalizada (Cumpleaños, eventos, etc.)</option>
+                    <option value="Bocaditos Clásicos (100 Unidades - S/. 90)">📦 Bocaditos Clásicos (100 Unid. - S/. 90)</option>
+                    <option value="Panes Artesanales">🥐 Panes Artesanales</option>
+                </select>
+            </div>
+
+            <!-- Opciones extra dinámicas que aparecen al elegir Torta -->
+            <div id="opciones-torta" style="display: none; border-left: 3px solid #7f4f24; padding-left: 15px; margin-bottom: 20px;">
+                <div class="campo">
+                    <label>Sabor de Bizcocho preferido:</label>
+                    <select id="sabor-torta">
+                        <option value="Chocolate">Chocolate</option>
+                        <option value="Vainilla con chispas">Vainilla con chispas</option>
+                        <option value="Red Velvet">Red Velvet</option>
+                        <option value="Keke de Novia / Frutos secos">Keke de Novia / Frutos secos</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label>Sabor de Relleno:</label>
+                    <select id="relleno-torta">
+                        <option value="Fudge de chocolate">Fudge de chocolate</option>
+                        <option value="Manjar blanco artesanal">Manjar blanco artesanal</option>
+                        <option value="Crema de Chantilly con fresas">Crema de Chantilly con fresas</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label>Especifica los detalles del pedido (Temática de torta, frases o bocaditos elegidos):</label>
+                <textarea id="detalles-pedido" rows="4" placeholder="Ej: Torta temática de color rosado con drip, letras de 'Happy Birthday' y 50 mini alfajores..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar Pedido a WhatsApp</button>
+        </form>
+    </section>
+
+    <!-- Sección de Contacto actualizada con tus dos números del afiche -->
+    <section id="contacto" class="seccion" style="text-align: center;">
+        <h3>Contacto y Ubicación</h3>
+        <p>📍 <strong>Dirección:</strong> Santa Martha 712, Urb. Urrunaga - JLO</p>
+        <p>📞 <strong>Central de Pedidos:</strong> 904 929 725 &nbsp;|&nbsp; 940 824 211</p>
+        <p>📸 <strong>Instagram:</strong> @P&DGONZALES</p>
+        <p>⏰ <strong>Horario de atención:</strong></p>
+        <p style="margin: 5px 0;">• Lunes a Sábado: 6:00 a.m. - 11:00 p.m. / 5:00 p.m. - 10:30 p.m.</p>
+        <p style="margin: 5px 0;">• Domingos: 6:00 a.m. - 11:00 a.m.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Pan & Dulces Gonzales. Todos los derechos reservados.</p>
+    </footer>
+
+       <!-- Botón Flotante de WhatsApp Actualizado -->
+    <a href="https://wa.link/4o2zm8" class="btn-whatsapp" target="_blank">
+        💬 ¡Pide por WhatsApp!
+    </a>
+
+    <!-- Conexión con tu archivo de javascript -->
+    <script src="codigo.js"></script>
+</body>
+</html>
